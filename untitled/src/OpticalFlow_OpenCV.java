@@ -1,11 +1,8 @@
-package test;
-
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.nio.Buffer;
-
 import javax.crypto.Cipher;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -108,7 +105,7 @@ public class OpticalFlow_OpenCV extends JPanel {
 			System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 			
 			Mat capImg = new Mat();
-			VideoCapture capture = new VideoCapture(0);
+			VideoCapture capture = new VideoCapture(1);
 			int height = (int)capture.get(Videoio.CAP_PROP_FRAME_HEIGHT);
 			int width = (int)capture.get(Videoio.CAP_PROP_FRAME_WIDTH);
 			if(height == 0 || width == 0) {
